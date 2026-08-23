@@ -17,6 +17,22 @@ void Addition()
 
 }
 
+void Substraction()
+{
+    float number,first,num;
+    cout<<"Enter the amount of no. u want to substract  : ";
+    cin>>number;
+    cout<<"Enter No. 1 : ";
+    cin>>first;
+    for (int i = 0; i < number-1 ; i++)
+    {
+        cout<<"Enter No. "<<i+2<<" : ";
+        cin>>num;
+        first = first-num;
+    }
+    cout<<"The Substraction of the numbers is : "<<first;
+}
+
 
 int main(){
    
@@ -35,7 +51,11 @@ cin>>choice;
 if (choice == 1)
 {
     Addition();
+}else if (choice == 2)
+{
+    Substraction();
 }
+
 
     return 0;
 }
