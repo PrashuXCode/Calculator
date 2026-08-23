@@ -33,6 +33,31 @@ void Substraction()
     cout<<"The Substraction of the numbers is : "<<first;
 }
 
+void Multiplication()
+{
+    float number,cross,num;
+    cout<<"Enter the amount of numbers u want to multiply  : ";
+    cin>>number;
+    cross=1;
+    for (int i = 0; i < number; i++)
+    {
+        cout<<"Enter No. "<<i+1<<":  ";
+        cin>>num;
+        cross = cross*num;                
+    }
+    cout<<"The Multiplication of the numbers is : "<<cross;
+}
+void Division()
+{
+    float divide,divident,divisor;  
+    cout<<"Enter the dividend : ";
+    cin>>divident;
+    cout<<"Enter the divisor : ";
+    cin>>divisor;
+    divide = divident/divisor;
+    cout<<"The Multiplication of the numbers is : "<<divide; 
+}
+
 
 int main(){
    
@@ -40,22 +65,37 @@ int main(){
 cout<<"Welcome to Calculator \n";
 cout<<"1 -----------> Additon  \n";   
 cout<<"2 -----------> Substraction \n" ;  
-cout<<"3 -----------> Division \n";
-cout<<"4 -----------> Multiplication \n";
+cout<<"3 -----------> Multiplication \n";
+cout<<"4 -----------> Division \n";
 cout<<"5 -----------> Exit \n";
 cout<<"\n";
 cout<<"\n";
-cout<<"Enter Your Choice : ";
-cin>>choice;
 
-if (choice == 1)
+choice = 0;
+
+while (choice =!5)
 {
-    Addition();
-}else if (choice == 2)
-{
-    Substraction();
+    cout<<"Enter Your Choice : ";
+    cin>>choice;
+
+    if (choice == 1)
+    {
+        Addition();
+    }else if (choice == 2)
+    {
+        Substraction();
+    }else if (choice == 3)
+    {
+        Multiplication();
+    }else if (choice =4)
+    {
+        Division();
+    }else if (choice == 5)
+    {
+        return 0;
+    }
 }
-
+cout<<"Thank You For Using This Calculator";
 
     return 0;
 }
