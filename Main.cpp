@@ -13,7 +13,7 @@ void Addition()
         cin>>num;
         sum = sum+num;                
     }
-    cout<<"The Addition of the numbers is : "<<sum;
+    cout<<"The Addition of the numbers is : "<<sum<<"\n";
 
 }
 
@@ -30,7 +30,7 @@ void Substraction()
         cin>>num;
         first = first-num;
     }
-    cout<<"The Substraction of the numbers is : "<<first;
+    cout<<"The Substraction of the numbers is : "<<first<<"\n";
 }
 
 void Multiplication()
@@ -45,7 +45,7 @@ void Multiplication()
         cin>>num;
         cross = cross*num;                
     }
-    cout<<"The Multiplication of the numbers is : "<<cross;
+    cout<<"The Multiplication of the numbers is : "<<cross<<"\n";
 }
 void Division()
 {
@@ -55,14 +55,15 @@ void Division()
     cout<<"Enter the divisor : ";
     cin>>divisor;
     divide = divident/divisor;
-    cout<<"The Multiplication of the numbers is : "<<divide; 
+    cout<<"The Multiplication of the numbers is : "<<divide<<"\n"; 
 }
 
 
 int main(){
-   
+
     int choice;
-cout<<"Welcome to Calculator \n";
+
+cout<<" Welcome to Calculator \n";
 cout<<"1 -----------> Additon  \n";   
 cout<<"2 -----------> Substraction \n" ;  
 cout<<"3 -----------> Multiplication \n";
@@ -70,14 +71,13 @@ cout<<"4 -----------> Division \n";
 cout<<"5 -----------> Exit \n";
 cout<<"\n";
 cout<<"\n";
-
-choice = 0;
-
-while (choice =!5)
+for (int i = 0; i < 100; i++)
 {
-    cout<<"Enter Your Choice : ";
-    cin>>choice;
 
+
+
+cout<<"Enter The Operation : ";
+    cin>>choice;
     if (choice == 1)
     {
         Addition();
@@ -87,15 +87,14 @@ while (choice =!5)
     }else if (choice == 3)
     {
         Multiplication();
-    }else if (choice =4)
+    }else if (choice == 4)
     {
         Division();
     }else if (choice == 5)
     {
+        cout<<"Thank You For Using This Calculator";
         return 0;
     }
-}
-cout<<"Thank You For Using This Calculator";
-
-    return 0;
+}  
+return 0;
 }
