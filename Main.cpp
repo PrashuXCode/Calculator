@@ -57,6 +57,14 @@ void Division()
     divide = divident/divisor;
     cout<<"The Multiplication of the numbers is : "<<divide<<"\n"; 
 }
+int Factorial(int n)
+{
+    if(n==0 || n==1)
+    {
+        return 1 ;
+    }
+    return n*Factorial(n-1);
+}
 
 
 int main(){
@@ -68,7 +76,8 @@ cout<<"1 -----------> Additon  \n";
 cout<<"2 -----------> Substraction \n" ;  
 cout<<"3 -----------> Multiplication \n";
 cout<<"4 -----------> Division \n";
-cout<<"5 -----------> Exit \n";
+cout<<"5 -----------> Factorial \n";
+cout<<"6 -----------> Exit \n";
 cout<<"\n";
 cout<<"\n";
 for (int i = 0; i < 100; i++)
@@ -91,6 +100,14 @@ cout<<"Enter The Operation : ";
     {
         Division();
     }else if (choice == 5)
+    {
+        int n,f;
+        cout<<"Enter The Number : ";
+        cin>>n;
+        f=Factorial(n);
+        cout<<"Its Factorial Is : "<<f<<"\n";
+
+    }else if (choice == 6)
     {
         cout<<"Thank You For Using This Calculator";
         return 0;
